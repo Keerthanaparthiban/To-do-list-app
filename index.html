@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List App</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Neucha&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <div class="todo-list">
+        <h2>To-Do List</h2>
+        <img src="assets/icon.png" alt="to-do-icon" />
+      </div>
+      <div class="list">
+        <div class="row">
+          <input type="text" id="input-box" placeholder="add new todo" />
+          <button>ADD</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
