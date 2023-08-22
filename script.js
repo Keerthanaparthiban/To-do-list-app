@@ -15,17 +15,14 @@ function addTask() {
     } else {
         inputBox.style.color = 'white';
         listContainer.style.display = 'block';
-
         // Create a new <li> element for the new task
         let li = document.createElement('li');
         li.innerHTML = inputBox.value;
         let span = document.createElement('span');
         span.innerHTML = '\u00d7';
         li.appendChild(span);
-
         // Check if there are any checked tasks
         const checkedTasks = listContainer.querySelectorAll('.checked');
-
         if (checkedTasks.length === 0) {
             // If there are no checked tasks, add the new task at the top
             listContainer.insertBefore(li, listContainer.firstChild);
@@ -33,7 +30,6 @@ function addTask() {
             // If there are checked tasks, add the new task at the top
             listContainer.insertBefore(li, listContainer.firstChild);
         }
-
         updateBackground(); // Update the background color
     }
     inputBox.value = '';
