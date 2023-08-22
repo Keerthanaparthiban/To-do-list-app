@@ -97,7 +97,7 @@ input[type="text"]:focus {
 
 ul li {
   list-style: none;
-  padding: 9px 45px;
+  padding: 10px 45px;
   user-select: none;
   cursor: pointer;
   position: relative;
@@ -108,7 +108,25 @@ ul li::before {
   position: absolute;
   height: 20px;
   width: 20px;
-  border: 3px solid orange;
+  border: 3px solid #fdaa45;
   border-radius: 50%;
   left: 10px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  background-image: url(assets/checked-new.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  left: 10px;
+  border: none;
 }
