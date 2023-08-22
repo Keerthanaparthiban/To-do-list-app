@@ -6,6 +6,7 @@ function addTask() {
         alert('you must write something');
     } else {
         inputBox.style.color = 'white';
+        listContainer.style.background = '';
         listContainer.style.display = 'block';
         let li = document.createElement('li');
         li.innerHTML = inputBox.value;
@@ -16,3 +17,14 @@ function addTask() {
     }
     inputBox.value = '';
 }
+
+listContainer.addEventListener('click', function (e) {
+    if (e.target.tagName === 'LI') {
+        e.target.classList.toggle('checked')
+    } else if (e.target.tagName === 'SPAN') {
+        e.target.parentElement.remove();
+        if (listContainer.querySelectorAll('li').length === 0) {
+            listContainer.style.background = 'none';
+        }
+    }
+}, false);
