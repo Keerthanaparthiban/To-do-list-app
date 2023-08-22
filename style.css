@@ -94,6 +94,8 @@ ul li {
   user-select: none;
   cursor: pointer;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 ul li::before {
@@ -138,4 +140,61 @@ ul li span {
 
 ul li span:hover {
   background-color: rgba(255, 255, 255, 0.447);
+}
+
+/* mobile responsive */
+
+@media (max-width: 1200px) {
+  .todo-list {
+    width: 70%;
+  }
+  #list-container {
+    width: 50%;
+  }
+  .list input {
+    width: 42%;
+  }
+}
+
+@media (max-width: 800px) {
+  #list-container {
+    width: 60%;
+  }
+  .list input {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  #list-container {
+    width: 60%;
+  }
+  .list input,
+  .list button,
+  ul li {
+    font-size: 16px;
+  }
+  .todo-list {
+    width: 80%;
+  }
+  #list-container {
+    width: 70%;
+  }
+  .list input {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .todo-list {
+    width: 90%;
+  }
+  #list-container {
+    width: 80%;
+  }
+  .list input,
+  .list button,
+  ul li {
+    font-size: 15px;
+  }
 }
